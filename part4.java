@@ -4,6 +4,8 @@
  * CS 3354.0w1
  * Part 4
  * 11/2/21
+ *
+ * 60% of the use cases have been coded, as per the suggested requirements from the professor.
  */
 
 package Group08;
