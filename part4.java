@@ -5,7 +5,7 @@
  * Part 4
  * 11/2/21
  *
- * 60% of the use cases have been coded, as per the suggested requirements from the professor.
+ * 60% of the use cases have been coded, as per the suggested requirements of the professor.
  */
 
 package Group08;
