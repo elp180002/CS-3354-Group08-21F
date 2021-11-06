@@ -5,7 +5,7 @@
  *
  * Author Name(s)			: Ethan Peglar, Mithul Manivannan
  * 
- * Project Name				: Software Engineering Project Part 4
+ * Project Name				: Café du Vend
  *
  * Organization				: The University of Texas at Dallas, Erik Jonsson School of Engineering and Computer Science
  *
