@@ -1,9 +1,41 @@
-/*
- * Ethan Peglar
- * elp180002
- * CS 3354.0w1
- * Part 4
- * 11/2/21
+/**
+ * File Name				: part4.java
+ * 
+ * Version Number			: 1.0
+ *
+ * Author Name(s)			: Ethan Peglar, Mithul Manivannan
+ * 
+ * Project Name				: Software Engineering Project Part 4
+ *
+ * Organization				: The University of Texas at Dallas, Erik Jonsson School of Engineering and Computer Science
+ *
+ * Input				: This class accepts input from the user in a such a way that mimics a vending machine
+ *					  transaction, in order to test use cases.
+ *
+ * Output				: This class will output various messages based on user input so that it resembles a
+ *					  vending machine.
+ *
+ * Copyright				: N/A
+ *
+ * Related Requirements			: Fulfill roughly half of the established use cases.
+ *
+ * List of Classes			: part4
+ *
+ * Related Documents			: Software Engineering Document and Presentation (submitted through eLearning)
+ *
+ * Update History			: N/A
+ *
+ * Reviewers				: N/A
+ *
+ * Test Cases				: Contained in SE Document
+ *
+ * Functional Description		: This program serves to simulate a real world coffee vending machine
+ *
+ * Error Messages			: N/A
+ *
+ * Assumptions				: N/A
+ *
+ * Constraints				: No error handling has been coded; therefore, user must type precise answers.
  *
  * 60% of the use cases have been coded, as per the suggested requirements of the professor.
  */
@@ -18,6 +50,11 @@ public class part4 {
 		System.out.println("(Program ended)");
 	}
 	
+	/* UC2
+	 * Input: N/A
+	 * Output: Total cost of transaction
+	 * selection() serves to simulate the process of selecting coffee from the vending machine
+	 */
 	public static double selection() { // UC2
 		Scanner vendor = new Scanner(System.in); // I don't close the scanners due to a bizzare exception error that occurs when closed
 		
@@ -98,7 +135,12 @@ public class part4 {
 		return total;
 	}
 	
-	public static boolean payment(double total) { // UC1
+	/* UC1
+	 * Input: Total cost of transaction
+	 * Output: Boolean, true if successful transaction, false otherwise
+	 * payment(total) serves to simulate the process of paying for coffee from the vending machine
+	 */
+	public static boolean payment(double total) {
 		double moneyInserted;
 		boolean successfulTransaction = false;
 		Scanner pay = new Scanner(System.in);
@@ -116,6 +158,11 @@ public class part4 {
 		return successfulTransaction;
 	}
 	
+	/* UC3
+	 * Input: N/A
+	 * Output: N/A
+	 * dispensing() serves to simulate the process of dispensing coffee from the vending machine
+	 */
 	public static void dispensing() { // UC 3
 		Scanner dispense = new Scanner(System.in);
 		System.out.println("Please place a cup and press OK (just press enter)");
