@@ -3,7 +3,7 @@
  * 
  * Version Number			: 1.0
  *
- * Author Name(s)			: Ethan Peglar, Mithul Manivannan
+ * Author Name(s)			: Ethan Peglar, Mithul Manivannan, Eddie Villarreal
  * 
  * Project Name				: Café du Vend
  *
