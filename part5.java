@@ -1,7 +1,7 @@
 /**
- * File Name				: part4.java
+ * File Name				: part5.java
  * 
- * Version Number			: 1.0
+ * Version Number			: 2.0
  *
  * Author Name(s)			: Ethan Peglar, Mithul Manivannan, Eddie Villarreal
  * 
@@ -19,7 +19,7 @@
  *
  * Related Requirements			: Fulfill roughly half of the established use cases.
  *
- * List of Classes			: part4
+ * List of Classes			: part5
  *
  * Related Documents			: Software Engineering Document and Presentation (submitted through eLearning)
  *
