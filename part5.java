@@ -43,7 +43,7 @@
 package Group08;
 import java.util.*;
 
-public class part4 {
+public class part5 {
 	public static void main(String[] args) {
 		double total = selection();
 		if (payment(total)) dispensing();
@@ -71,7 +71,8 @@ public class part4 {
 		boolean checkoutSelected = false;
 
 		while (!checkoutSelected) {
-			System.out.println("Please select option (type c1, f1, c2, Pay, etc.): ");
+			System.out.println("Welcome to Café du Vend!" + '\n');
+			System.out.println("Please select option (type c1, f1, c2, pay, etc.): ");
 			System.out.println("Coffee #1: Cappuchino, $4.50");
 			System.out.println("Coffee #2: Hot Chocolate, $2.50");
 			System.out.println("Coffee #3: Latte, $5.00");
@@ -120,7 +121,7 @@ public class part4 {
 				System.out.println("Irish Creme added");
 				total += priceIrish;
 				break;
-			case "Pay":
+			case "pay":
 				if (total == 0.0) {
 					System.out.println("Error: No option selected.");
 				} else {
@@ -141,16 +142,32 @@ public class part4 {
 	 * payment(total) serves to simulate the process of paying for coffee from the vending machine
 	 */
 	public static boolean payment(double total) {
-		double moneyInserted;
+		double moneyInserted, change;
+		int paymentMethod;
 		boolean successfulTransaction = false;
+		Scanner method = new Scanner(System.in);
 		Scanner pay = new Scanner(System.in);
 		
-		System.out.println("Please insert cash or card (type total)");
+		System.out.println("Pay with 1) Cash or 2) Credit Card? (type 1 or 2)");
+		paymentMethod = method.nextInt();
+		
+		switch (paymentMethod) {
+		case 1:
+			System.out.println("Please insert cash (type total)");
+			break;
+		case 2:
+			System.out.println("Please insert card (type total)");
+			break;
+		}
+		
 		moneyInserted = pay.nextDouble();
 		
 		if (moneyInserted >= total) {
 			successfulTransaction = true;
+			change = moneyInserted - total;
 			System.out.println("Transaction successful");
+			System.out.println("Change due: $" + change);
+			if (paymentMethod == 1) System.out.println("Dispensing change..." + '\n');
 		} else {
 			System.out.println("Transaction failed");
 		}
@@ -168,8 +185,11 @@ public class part4 {
 		System.out.println("Please place a cup and press OK (just press enter)");
 		dispense.nextLine();
 		
+		System.out.println("Dispensing Coffee...");
+		System.out.println("Dispensing Creamer...");
 		System.out.println("Coffee is ready. Please remove cup and press OK to return to home screen. (just press enter)");
 		dispense.nextLine();
+		System.out.println("Dispensing Water for cleaning...");
 		}
 	
 }
